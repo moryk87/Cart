@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		1486BE57203C386700BA072B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486BE56203C386700BA072B /* AppDelegate.swift */; };
-		1486BE59203C386700BA072B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486BE58203C386700BA072B /* ViewController.swift */; };
+		1486BE59203C386700BA072B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486BE58203C386700BA072B /* MainViewController.swift */; };
 		1486BE5C203C386700BA072B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1486BE5A203C386700BA072B /* Main.storyboard */; };
 		1486BE5E203C386700BA072B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1486BE5D203C386700BA072B /* Assets.xcassets */; };
 		1486BE61203C386700BA072B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1486BE5F203C386700BA072B /* LaunchScreen.storyboard */; };
+		1486BE6C203C38FC00BA072B /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486BE6B203C38FC00BA072B /* CheckoutViewController.swift */; };
+		1486BE6E203C3CCB00BA072B /* GetCurrencyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486BE6D203C3CCB00BA072B /* GetCurrencyData.swift */; };
+		1486BE70203C409A00BA072B /* MV+UIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486BE6F203C409A00BA072B /* MV+UIConfig.swift */; };
+		1486BE74203C695000BA072B /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486BE73203C695000BA072B /* CartTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1486BE53203C386700BA072B /* Cart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1486BE56203C386700BA072B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1486BE58203C386700BA072B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1486BE58203C386700BA072B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1486BE5B203C386700BA072B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1486BE5D203C386700BA072B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1486BE60203C386700BA072B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1486BE62203C386700BA072B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1486BE6B203C38FC00BA072B /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
+		1486BE6D203C3CCB00BA072B /* GetCurrencyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrencyData.swift; sourceTree = "<group>"; };
+		1486BE6F203C409A00BA072B /* MV+UIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MV+UIConfig.swift"; sourceTree = "<group>"; };
+		1486BE73203C695000BA072B /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +63,41 @@
 			isa = PBXGroup;
 			children = (
 				1486BE56203C386700BA072B /* AppDelegate.swift */,
-				1486BE58203C386700BA072B /* ViewController.swift */,
-				1486BE5A203C386700BA072B /* Main.storyboard */,
+				1486BE68203C387600BA072B /* Controller */,
+				1486BE69203C387C00BA072B /* Model */,
+				1486BE6A203C388600BA072B /* View */,
 				1486BE5D203C386700BA072B /* Assets.xcassets */,
-				1486BE5F203C386700BA072B /* LaunchScreen.storyboard */,
 				1486BE62203C386700BA072B /* Info.plist */,
 			);
 			path = Cart;
+			sourceTree = "<group>";
+		};
+		1486BE68203C387600BA072B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1486BE58203C386700BA072B /* MainViewController.swift */,
+				1486BE6B203C38FC00BA072B /* CheckoutViewController.swift */,
+				1486BE6F203C409A00BA072B /* MV+UIConfig.swift */,
+				1486BE73203C695000BA072B /* CartTableViewCell.swift */,
+				1486BE6D203C3CCB00BA072B /* GetCurrencyData.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1486BE69203C387C00BA072B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1486BE6A203C388600BA072B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1486BE5A203C386700BA072B /* Main.storyboard */,
+				1486BE5F203C386700BA072B /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +172,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1486BE59203C386700BA072B /* ViewController.swift in Sources */,
+				1486BE70203C409A00BA072B /* MV+UIConfig.swift in Sources */,
+				1486BE59203C386700BA072B /* MainViewController.swift in Sources */,
+				1486BE6E203C3CCB00BA072B /* GetCurrencyData.swift in Sources */,
+				1486BE74203C695000BA072B /* CartTableViewCell.swift in Sources */,
+				1486BE6C203C38FC00BA072B /* CheckoutViewController.swift in Sources */,
 				1486BE57203C386700BA072B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
