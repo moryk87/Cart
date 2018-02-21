@@ -7,29 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14036A50203E05A600BDBDDC /* CartVC+AddTableVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14036A4F203E05A600BDBDDC /* CartVC+AddTableVCDelegate.swift */; };
 		1486BE57203C386700BA072B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486BE56203C386700BA072B /* AppDelegate.swift */; };
-		1486BE59203C386700BA072B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486BE58203C386700BA072B /* MainViewController.swift */; };
+		1486BE59203C386700BA072B /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486BE58203C386700BA072B /* CartViewController.swift */; };
 		1486BE5C203C386700BA072B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1486BE5A203C386700BA072B /* Main.storyboard */; };
 		1486BE5E203C386700BA072B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1486BE5D203C386700BA072B /* Assets.xcassets */; };
 		1486BE61203C386700BA072B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1486BE5F203C386700BA072B /* LaunchScreen.storyboard */; };
 		1486BE6C203C38FC00BA072B /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486BE6B203C38FC00BA072B /* CheckoutViewController.swift */; };
 		1486BE6E203C3CCB00BA072B /* GetCurrencyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486BE6D203C3CCB00BA072B /* GetCurrencyData.swift */; };
-		1486BE70203C409A00BA072B /* MV+UIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486BE6F203C409A00BA072B /* MV+UIConfig.swift */; };
+		1486BE70203C409A00BA072B /* CartVC+TableConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486BE6F203C409A00BA072B /* CartVC+TableConfig.swift */; };
 		1486BE74203C695000BA072B /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486BE73203C695000BA072B /* CartTableViewCell.swift */; };
+		1486BE96203D8EA100BA072B /* GoodsLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486BE95203D8EA100BA072B /* GoodsLabel.swift */; };
+		1486BE98203D8F5F00BA072B /* GoodsBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486BE97203D8F5F00BA072B /* GoodsBank.swift */; };
+		1486BE9A203DAC9200BA072B /* AddTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486BE99203DAC9200BA072B /* AddTableViewCell.swift */; };
+		1486BE9E203DBF0A00BA072B /* CartVC+AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486BE9D203DBF0A00BA072B /* CartVC+AlertController.swift */; };
+		C9AC92B3FFF9C8EBC26457DC /* Pods_Cart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1534D62F014952E5D8D00EA6 /* Pods_Cart.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12AA18F04C390BA4E3E8D085 /* Pods-Cart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cart.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cart/Pods-Cart.release.xcconfig"; sourceTree = "<group>"; };
+		14036A4F203E05A600BDBDDC /* CartVC+AddTableVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CartVC+AddTableVCDelegate.swift"; sourceTree = "<group>"; };
 		1486BE53203C386700BA072B /* Cart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1486BE56203C386700BA072B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1486BE58203C386700BA072B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1486BE58203C386700BA072B /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		1486BE5B203C386700BA072B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1486BE5D203C386700BA072B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1486BE60203C386700BA072B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1486BE62203C386700BA072B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1486BE6B203C38FC00BA072B /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		1486BE6D203C3CCB00BA072B /* GetCurrencyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrencyData.swift; sourceTree = "<group>"; };
-		1486BE6F203C409A00BA072B /* MV+UIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MV+UIConfig.swift"; sourceTree = "<group>"; };
+		1486BE6F203C409A00BA072B /* CartVC+TableConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CartVC+TableConfig.swift"; sourceTree = "<group>"; };
 		1486BE73203C695000BA072B /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		1486BE95203D8EA100BA072B /* GoodsLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsLabel.swift; sourceTree = "<group>"; };
+		1486BE97203D8F5F00BA072B /* GoodsBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsBank.swift; sourceTree = "<group>"; };
+		1486BE99203DAC9200BA072B /* AddTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTableViewCell.swift; sourceTree = "<group>"; };
+		1486BE9D203DBF0A00BA072B /* CartVC+AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CartVC+AlertController.swift"; sourceTree = "<group>"; };
+		1534D62F014952E5D8D00EA6 /* Pods_Cart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		864411A897F88B692A6C61CB /* Pods-Cart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cart.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cart/Pods-Cart.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9AC92B3FFF9C8EBC26457DC /* Pods_Cart.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +63,8 @@
 			children = (
 				1486BE55203C386700BA072B /* Cart */,
 				1486BE54203C386700BA072B /* Products */,
+				8C4732DB961C90936A495179 /* Pods */,
+				3E15FA0EA00EB20723D8659A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,10 +92,13 @@
 		1486BE68203C387600BA072B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1486BE58203C386700BA072B /* MainViewController.swift */,
+				1486BE58203C386700BA072B /* CartViewController.swift */,
+				1486BE6F203C409A00BA072B /* CartVC+TableConfig.swift */,
+				14036A4F203E05A600BDBDDC /* CartVC+AddTableVCDelegate.swift */,
+				1486BE9D203DBF0A00BA072B /* CartVC+AlertController.swift */,
 				1486BE6B203C38FC00BA072B /* CheckoutViewController.swift */,
-				1486BE6F203C409A00BA072B /* MV+UIConfig.swift */,
 				1486BE73203C695000BA072B /* CartTableViewCell.swift */,
+				1486BE99203DAC9200BA072B /* AddTableViewCell.swift */,
 				1486BE6D203C3CCB00BA072B /* GetCurrencyData.swift */,
 			);
 			path = Controller;
@@ -87,6 +107,8 @@
 		1486BE69203C387C00BA072B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1486BE95203D8EA100BA072B /* GoodsLabel.swift */,
+				1486BE97203D8F5F00BA072B /* GoodsBank.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -100,6 +122,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		3E15FA0EA00EB20723D8659A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1534D62F014952E5D8D00EA6 /* Pods_Cart.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C4732DB961C90936A495179 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				864411A897F88B692A6C61CB /* Pods-Cart.debug.xcconfig */,
+				12AA18F04C390BA4E3E8D085 /* Pods-Cart.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -107,9 +146,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1486BE65203C386700BA072B /* Build configuration list for PBXNativeTarget "Cart" */;
 			buildPhases = (
+				61445F5FAA69776344164ACD /* [CP] Check Pods Manifest.lock */,
 				1486BE4F203C386700BA072B /* Sources */,
 				1486BE50203C386700BA072B /* Frameworks */,
 				1486BE51203C386700BA072B /* Resources */,
+				3B9190115C282F42B9D9D9DF /* [CP] Embed Pods Frameworks */,
+				0A6C13F903162FD6A2A72DB4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,14 +209,79 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0A6C13F903162FD6A2A72DB4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cart/Pods-Cart-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B9190115C282F42B9D9D9DF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Cart/Pods-Cart-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cart/Pods-Cart-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61445F5FAA69776344164ACD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cart-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1486BE4F203C386700BA072B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1486BE70203C409A00BA072B /* MV+UIConfig.swift in Sources */,
-				1486BE59203C386700BA072B /* MainViewController.swift in Sources */,
+				1486BE9A203DAC9200BA072B /* AddTableViewCell.swift in Sources */,
+				1486BE70203C409A00BA072B /* CartVC+TableConfig.swift in Sources */,
+				1486BE59203C386700BA072B /* CartViewController.swift in Sources */,
+				1486BE98203D8F5F00BA072B /* GoodsBank.swift in Sources */,
+				1486BE96203D8EA100BA072B /* GoodsLabel.swift in Sources */,
 				1486BE6E203C3CCB00BA072B /* GetCurrencyData.swift in Sources */,
+				1486BE9E203DBF0A00BA072B /* CartVC+AlertController.swift in Sources */,
+				14036A50203E05A600BDBDDC /* CartVC+AddTableVCDelegate.swift in Sources */,
 				1486BE74203C695000BA072B /* CartTableViewCell.swift in Sources */,
 				1486BE6C203C38FC00BA072B /* CheckoutViewController.swift in Sources */,
 				1486BE57203C386700BA072B /* AppDelegate.swift in Sources */,
@@ -312,6 +419,7 @@
 		};
 		1486BE66203C386700BA072B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 864411A897F88B692A6C61CB /* Pods-Cart.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -327,6 +435,7 @@
 		};
 		1486BE67203C386700BA072B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12AA18F04C390BA4E3E8D085 /* Pods-Cart.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

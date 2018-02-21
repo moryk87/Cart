@@ -7,18 +7,27 @@
 //
 
 import UIKit
+import SwipeCellKit
 
-class CartTableViewCell: UITableViewCell {
+class CartTableViewCell: SwipeTableViewCell {
+    
+    @IBOutlet weak var nameCell: UILabel!
+    @IBOutlet weak var descriptionCell: UILabel!
+    @IBOutlet weak var priceCell: UILabel!
+    @IBOutlet weak var quantityCell: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    @IBAction func lessButtonPressed(_ sender: UIButton) {
+        print("less")
     }
+    
+    @IBAction func moreButtonPressed(_ sender: UIButton) {
+        print("more")
+    }
+    
 
 }
