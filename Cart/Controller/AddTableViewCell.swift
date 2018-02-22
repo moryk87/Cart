@@ -14,7 +14,7 @@ protocol AddTableViewCellDelegate {
 
 class AddTableViewCell: UITableViewCell {
     
-    var delegate: AddTableViewCellDelegate?
+    var addDelegate: AddTableViewCellDelegate?
     
     @IBOutlet weak var addNameCell: UILabel!
     @IBOutlet weak var addDescriptionCell: UILabel!
@@ -30,7 +30,7 @@ class AddTableViewCell: UITableViewCell {
     @IBAction func addGoodsButtonPressed(_ sender: UIButton) {
         print("goods added")
         
-        self.delegate?.didAddGoodsToCart(didSelect: self)
+        self.addDelegate?.didAddGoodsToCart(didSelect: self)
     }
     
 

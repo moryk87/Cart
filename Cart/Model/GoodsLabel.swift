@@ -14,14 +14,12 @@ class GoodsLabel {
     var description: String
     var price: Float
     var quantity: Int
-    var inCart: Bool
     
-    init(name: String, description: String, price: Float, quantity: Int, inCart: Bool) {
+    init(name: String, description: String, price: Float, quantity: Int) {
         self.name = name
         self.description = description
         self.price = price
         self.quantity = quantity
-        self.inCart = inCart
     }
     
 }

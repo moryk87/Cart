@@ -9,7 +9,13 @@
 import UIKit
 import SwipeCellKit
 
+protocol CartTableViewCellDelegate {
+    func didChangeAmountOfGoods(didSelect: SwipeTableViewCell, condition: String)
+}
+
 class CartTableViewCell: SwipeTableViewCell {
+    
+    var cartDelegate:CartTableViewCellDelegate?
     
     @IBOutlet weak var nameCell: UILabel!
     @IBOutlet weak var descriptionCell: UILabel!
@@ -22,11 +28,13 @@ class CartTableViewCell: SwipeTableViewCell {
     }
     
     @IBAction func lessButtonPressed(_ sender: UIButton) {
-        print("less")
+        self.cartDelegate?.didChangeAmountOfGoods(didSelect: self, condition: "less")
+        print("l")
     }
     
     @IBAction func moreButtonPressed(_ sender: UIButton) {
-        print("more")
+        self.cartDelegate?.didChangeAmountOfGoods(didSelect: self, condition: "more")
+        print("m")
     }
     
 

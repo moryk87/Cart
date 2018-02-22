@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14036A50203E05A600BDBDDC /* CartVC+AddTableVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14036A4F203E05A600BDBDDC /* CartVC+AddTableVCDelegate.swift */; };
+		14036A50203E05A600BDBDDC /* CartVC+CellDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14036A4F203E05A600BDBDDC /* CartVC+CellDelegates.swift */; };
 		1486BE57203C386700BA072B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486BE56203C386700BA072B /* AppDelegate.swift */; };
 		1486BE59203C386700BA072B /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486BE58203C386700BA072B /* CartViewController.swift */; };
 		1486BE5C203C386700BA072B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1486BE5A203C386700BA072B /* Main.storyboard */; };
@@ -21,12 +21,13 @@
 		1486BE98203D8F5F00BA072B /* GoodsBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486BE97203D8F5F00BA072B /* GoodsBank.swift */; };
 		1486BE9A203DAC9200BA072B /* AddTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486BE99203DAC9200BA072B /* AddTableViewCell.swift */; };
 		1486BE9E203DBF0A00BA072B /* CartVC+AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486BE9D203DBF0A00BA072B /* CartVC+AlertController.swift */; };
+		1490399B203F1EFB008791A1 /* CheckoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1490399A203F1EFB008791A1 /* CheckoutTableViewCell.swift */; };
 		C9AC92B3FFF9C8EBC26457DC /* Pods_Cart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1534D62F014952E5D8D00EA6 /* Pods_Cart.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		12AA18F04C390BA4E3E8D085 /* Pods-Cart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cart.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cart/Pods-Cart.release.xcconfig"; sourceTree = "<group>"; };
-		14036A4F203E05A600BDBDDC /* CartVC+AddTableVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CartVC+AddTableVCDelegate.swift"; sourceTree = "<group>"; };
+		14036A4F203E05A600BDBDDC /* CartVC+CellDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CartVC+CellDelegates.swift"; sourceTree = "<group>"; };
 		1486BE53203C386700BA072B /* Cart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1486BE56203C386700BA072B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1486BE58203C386700BA072B /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +43,7 @@
 		1486BE97203D8F5F00BA072B /* GoodsBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsBank.swift; sourceTree = "<group>"; };
 		1486BE99203DAC9200BA072B /* AddTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTableViewCell.swift; sourceTree = "<group>"; };
 		1486BE9D203DBF0A00BA072B /* CartVC+AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CartVC+AlertController.swift"; sourceTree = "<group>"; };
+		1490399A203F1EFB008791A1 /* CheckoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutTableViewCell.swift; sourceTree = "<group>"; };
 		1534D62F014952E5D8D00EA6 /* Pods_Cart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		864411A897F88B692A6C61CB /* Pods-Cart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cart.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cart/Pods-Cart.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,11 +96,12 @@
 			children = (
 				1486BE58203C386700BA072B /* CartViewController.swift */,
 				1486BE6F203C409A00BA072B /* CartVC+TableConfig.swift */,
-				14036A4F203E05A600BDBDDC /* CartVC+AddTableVCDelegate.swift */,
+				14036A4F203E05A600BDBDDC /* CartVC+CellDelegates.swift */,
 				1486BE9D203DBF0A00BA072B /* CartVC+AlertController.swift */,
 				1486BE6B203C38FC00BA072B /* CheckoutViewController.swift */,
 				1486BE73203C695000BA072B /* CartTableViewCell.swift */,
 				1486BE99203DAC9200BA072B /* AddTableViewCell.swift */,
+				1490399A203F1EFB008791A1 /* CheckoutTableViewCell.swift */,
 				1486BE6D203C3CCB00BA072B /* GetCurrencyData.swift */,
 			);
 			path = Controller;
@@ -277,11 +280,12 @@
 				1486BE9A203DAC9200BA072B /* AddTableViewCell.swift in Sources */,
 				1486BE70203C409A00BA072B /* CartVC+TableConfig.swift in Sources */,
 				1486BE59203C386700BA072B /* CartViewController.swift in Sources */,
+				1490399B203F1EFB008791A1 /* CheckoutTableViewCell.swift in Sources */,
 				1486BE98203D8F5F00BA072B /* GoodsBank.swift in Sources */,
 				1486BE96203D8EA100BA072B /* GoodsLabel.swift in Sources */,
 				1486BE6E203C3CCB00BA072B /* GetCurrencyData.swift in Sources */,
 				1486BE9E203DBF0A00BA072B /* CartVC+AlertController.swift in Sources */,
-				14036A50203E05A600BDBDDC /* CartVC+AddTableVCDelegate.swift in Sources */,
+				14036A50203E05A600BDBDDC /* CartVC+CellDelegates.swift in Sources */,
 				1486BE74203C695000BA072B /* CartTableViewCell.swift in Sources */,
 				1486BE6C203C38FC00BA072B /* CheckoutViewController.swift in Sources */,
 				1486BE57203C386700BA072B /* AppDelegate.swift in Sources */,

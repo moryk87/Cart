@@ -8,11 +8,11 @@
 
 import UIKit
 
-
 class CartViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var navBar: UINavigationItem!
     @IBOutlet weak var navBarButton: UIBarButtonItem!
+    @IBOutlet weak var emptyCart: UILabel!
     @IBOutlet weak var cartTable: UITableView!
     @IBOutlet weak var checkoutButton: UIButton!
     
@@ -36,9 +36,16 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         addView.layer.cornerRadius = 5
         doneAddButton.layer.cornerRadius = 5
         
-        cartArray = allGoods.listOfGoods
-        cartArray.forEach { print($0.inCart) }
-        print(cartArray.count)
+        defaultArraysConfig()
+    }
+    
+    func defaultArraysConfig(){
+        cartArray.append(allGoods.listOfGoods[0])
+        goodsToAddArray = allGoods.listOfGoods
+        goodsToAddArray.remove(at: 0)
+        
+//        cartArray.forEach { print($0.name) }
+//        print(cartArray.count)
     }
     
     func showAddMenu() {
@@ -46,6 +53,14 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         addView.center = self.view.center
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationNavigationController = segue.destination as! UINavigationController
+        let targetVC = destinationNavigationController.topViewController as! CheckoutViewController
+        
+        targetVC.checkoutArray = cartArray
+        print("targetVC.checkoutArray.count")
+        print(targetVC.checkoutArray.count)
+    }
     
     @IBAction func navBarButtonPressed(_ sender: UIBarButtonItem) {
         configBlurEffect()
@@ -62,12 +77,10 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         addView.removeFromSuperview()
         blurVisualEffectView.removeFromSuperview()
         
-        print("xxxxxxx")
-        cartArray.forEach { print($0.inCart) }
-        print("xxxxxxx")
+//        print("xxxxxxx")
+//        cartArray.forEach { print($0.name) }
+//        print("xxxxxxx")
     }
-    
-    
     
 }
 

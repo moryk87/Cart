@@ -25,7 +25,7 @@ extension CartViewController {
 //
 //        saveAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in self.blurVisualEffectView.removeFromSuperview()
 //        }))
-//
+//thank you for purchase
 //        present(saveAlert, animated: true, completion: nil)
 //    }
     
