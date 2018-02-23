@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CartViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class CartViewController: UIViewController {
 
     @IBOutlet weak var navBar: UINavigationItem!
     @IBOutlet weak var navBarButton: UIBarButtonItem!
@@ -20,8 +20,7 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var addTable: UITableView!
     @IBOutlet weak var doneAddButton: UIButton!
     
-    
-    let allGoods = GoodsBank()
+    let goodsBank = GoodsBank()
     var cartArray = [GoodsLabel] ()
     var goodsToAddArray = [GoodsLabel] ()
     
@@ -40,8 +39,8 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func defaultArraysConfig(){
-        cartArray.append(allGoods.listOfGoods[0])
-        goodsToAddArray = allGoods.listOfGoods
+        cartArray.append(goodsBank.listOfGoods[0])
+        goodsToAddArray = goodsBank.listOfGoods
         goodsToAddArray.remove(at: 0)
         
 //        cartArray.forEach { print($0.name) }
@@ -50,7 +49,7 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func showAddMenu() {
         self.view.addSubview(addView)
-        addView.center = self.view.center
+        self.addView.center = CGPoint(x: self.view.bounds.midX, y: self.view.bounds.midY)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -58,9 +57,21 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let targetVC = destinationNavigationController.topViewController as! CheckoutViewController
         
         targetVC.checkoutArray = cartArray
-        print("targetVC.checkoutArray.count")
-        print(targetVC.checkoutArray.count)
+//        print("targetVC.checkoutArray.count")
+//        print(targetVC.checkoutArray.count)
     }
+    
+    func configBlurEffect() {
+        
+        let blurEffect = UIBlurEffect(style: .light)
+        blurVisualEffectView = UIVisualEffectView(effect: blurEffect)
+        blurVisualEffectView.frame = view.bounds
+        self.view.addSubview(blurVisualEffectView)
+    }
+    
+   
+    //MARK: - IBAction Buttons
+    /***************************************************************/
     
     @IBAction func navBarButtonPressed(_ sender: UIBarButtonItem) {
         configBlurEffect()

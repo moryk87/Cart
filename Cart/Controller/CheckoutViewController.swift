@@ -7,10 +7,11 @@
 //
 
 import UIKit
-//import PKHUD
+import PKHUD
 
-class CheckoutViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CheckoutViewController: UIViewController {
     
+    @IBOutlet weak var changeCurrencyButton: UIButton!
     @IBOutlet weak var checkoutTable: UITableView!
     @IBOutlet weak var emptyCheckout: UILabel!
     
@@ -21,74 +22,105 @@ class CheckoutViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var total: UILabel!
     @IBOutlet weak var totalCurrency: UILabel!
     
+    @IBOutlet var currencyView: UIView!
+    @IBOutlet weak var currencyPicker: UIPickerView!
+    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var selectButton: UIButton!
+    
     let cartVC = CartViewController()
+    let getCurrencyData = GetCurrencyData()
+    let currencyBank = CurrencyBank()
+    var currencyArray = [CurrencyLabel] ()
     var checkoutArray = [GoodsLabel] ()
+    var blurVisualEffectView = UIVisualEffectView()
+    
     var conversationRate: Float = 1.0
     var currentCurrency: String = "USD"
+    var newCurrency: String = "EUR"
+    let basicURL = "http://apilayer.net/api/live?access_key="
+    let API_Key = "5a8c85301ed20aa914de5c95f72f3cd3"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        currencyArray = currencyBank.listOfCurrency
+        
         configCheckoutTable()
-        configPriceLabels(currency: currentCurrency)
-    }
-
-    func configCheckoutTable() {
-        checkoutTable.allowsSelection = false
-        checkoutTable.tableFooterView = UIView()
-        checkoutTable.delegate = self
-        checkoutTable.dataSource = self
+        configCurrencyPicker()
+        configPriceLabels()
+        configRadius()
+        
+        getCurrencyData.currencyDelegate = self
     }
     
-    func configPriceLabels(currency: String) {
+    func configRadius() {
+        currencyView.layer.cornerRadius = 5
+        changeCurrencyButton.layer.cornerRadius = 5
+        cancelButton.layer.cornerRadius = 5
+        selectButton.layer.cornerRadius = 5
+    }
+ 
+    func configPriceLabels() {
         var subtotalPrice: Float = 0
+        checkoutArray.forEach { subtotalPrice += ($0.price * Float($0.quantity) * conversationRate) }
         
-//        checkoutArray.forEach { subtotalPrice = subtotalPrice + ($0.price) }
-        checkoutArray.forEach { subtotalPrice += ($0.price) }
-        print(subtotalPrice)
-        
-        subTotal.text = String(subtotalPrice)
-        subTotalCurrency.text = currency
+        subTotal.text = String(subtotalPrice.withTwoDigits)
+        subTotalCurrency.text = currentCurrency
         
         let shippingPrice: Float = 5 * conversationRate
-        shipping.text = String(shippingPrice)
-        shippingCurrency.text = currency
+        shipping.text = String(shippingPrice.withTwoDigits)
+        shippingCurrency.text = currentCurrency
         
-        total.text = String(subtotalPrice + shippingPrice)
-        totalCurrency.text = currency
-        
+        total.text = String((subtotalPrice + shippingPrice).withTwoDigits)
+        totalCurrency.text = currentCurrency
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if checkoutArray.count == 0 {
-//            emptyCheckout.isHidden = false
-            checkoutTable.isHidden = true
-        }
-        return checkoutArray.count
+    func showCurrencyMenu() {
+        self.view.addSubview(currencyView)
+        self.currencyView.center = CGPoint(x: self.view.bounds.midX, y: self.view.bounds.midY)
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = checkoutTable.dequeueReusableCell(withIdentifier: "checkoutCell", for: indexPath) as! CheckoutTableViewCell
-        
-        cell.checkoutNameCell.text = checkoutArray[indexPath.row].name
-        cell.checkoutDescriptionCell.text = checkoutArray[indexPath.row].description
-        cell.checkoutQuantityCell.text = String(checkoutArray[indexPath.row].quantity) + "x"
-        cell.checkoutPriceCell.text =
-            String(Float(checkoutArray[indexPath.row].quantity) * checkoutArray[indexPath.row].price * conversationRate)
-        
-        return cell
+    func makeRequestURL(APIKey key: String, sourceCurrency: String, targetCurrency: String) -> String {
+//        print("\(basicURL + key + "&source=" + sourceCurrency + "&currencies=" + targetCurrency)")
+        return (basicURL + key + "&source=" + sourceCurrency + "&currencies=" + targetCurrency)
     }
     
+    
+    //MARK: - IBAction Buttons
+    /***************************************************************/
     
     @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func changeCurrencyButtonPressed(_ sender: UIButton) {
+        configBlurEffect()
+        showCurrencyMenu()
     }
     
-    @IBAction func payButtonPressed(_ sender: UIButton) {
+    
+    @IBAction func orderButtonPressed(_ sender: UIButton) {
+        if checkoutArray.isEmpty == true {
+            popUpAlert(condition: "emptyCart", errorCode: 000, description: "")
+        } else {
+            popUpAlert(condition: "placeOrder", errorCode: 000, description: "")
+        }
     }
     
+    @IBAction func cancelButtonPressed(_ sender: UIButton) {
+        currencyView.removeFromSuperview()
+        blurVisualEffectView.removeFromSuperview()
+    }
+    
+    @IBAction func selectButtonPressed(_ sender: UIButton) {
+        currencyView.removeFromSuperview()
+        blurVisualEffectView.removeFromSuperview()
+        
+//        print(newCurrency)
+        let requestedURL = makeRequestURL(APIKey: API_Key, sourceCurrency: "USD", targetCurrency: newCurrency)
+        let requestedPair = "USD" + newCurrency
+        getCurrencyData.downloadRate(url: requestedURL, pair: requestedPair)
+        HUD.show(.progress)
+    }
     
 }

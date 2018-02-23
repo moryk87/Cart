@@ -9,7 +9,7 @@
 import UIKit
 import SwipeCellKit
 
-extension CartViewController: SwipeTableViewCellDelegate {
+extension CartViewController: UITableViewDataSource, UITableViewDelegate, SwipeTableViewCellDelegate {
     
     func configCartTable() {
         cartTable.tableFooterView = UIView()
@@ -25,8 +25,8 @@ extension CartViewController: SwipeTableViewCellDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        print("cartArray.count:")
-        print(cartArray.count)
+//        print("cartArray.count:")
+//        print(cartArray.count)
         
         if tableView == self.cartTable {
             if cartArray.count == 0 {

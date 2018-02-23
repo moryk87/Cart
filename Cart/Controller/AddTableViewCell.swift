@@ -28,10 +28,7 @@ class AddTableViewCell: UITableViewCell {
     }
     
     @IBAction func addGoodsButtonPressed(_ sender: UIButton) {
-        print("goods added")
-        
         self.addDelegate?.didAddGoodsToCart(didSelect: self)
     }
-    
 
 }

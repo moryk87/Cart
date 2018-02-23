@@ -15,12 +15,12 @@ protocol CartTableViewCellDelegate {
 
 class CartTableViewCell: SwipeTableViewCell {
     
-    var cartDelegate:CartTableViewCellDelegate?
-    
     @IBOutlet weak var nameCell: UILabel!
     @IBOutlet weak var descriptionCell: UILabel!
     @IBOutlet weak var priceCell: UILabel!
     @IBOutlet weak var quantityCell: UILabel!
+    
+    var cartDelegate:CartTableViewCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,13 +29,10 @@ class CartTableViewCell: SwipeTableViewCell {
     
     @IBAction func lessButtonPressed(_ sender: UIButton) {
         self.cartDelegate?.didChangeAmountOfGoods(didSelect: self, condition: "less")
-        print("l")
     }
     
     @IBAction func moreButtonPressed(_ sender: UIButton) {
         self.cartDelegate?.didChangeAmountOfGoods(didSelect: self, condition: "more")
-        print("m")
     }
-    
 
 }
