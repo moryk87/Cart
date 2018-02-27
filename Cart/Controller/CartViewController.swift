@@ -42,9 +42,6 @@ class CartViewController: UIViewController {
         cartArray.append(goodsBank.listOfGoods[0])
         goodsToAddArray = goodsBank.listOfGoods
         goodsToAddArray.remove(at: 0)
-        
-//        cartArray.forEach { print($0.name) }
-//        print(cartArray.count)
     }
     
     func showAddMenu() {
@@ -57,8 +54,7 @@ class CartViewController: UIViewController {
         let targetVC = destinationNavigationController.topViewController as! CheckoutViewController
         
         targetVC.checkoutArray = cartArray
-//        print("targetVC.checkoutArray.count")
-//        print(targetVC.checkoutArray.count)
+        targetVC.checkoutDelegate = self
     }
     
     func configBlurEffect() {
@@ -87,11 +83,6 @@ class CartViewController: UIViewController {
         cartTable.reloadData()
         addView.removeFromSuperview()
         blurVisualEffectView.removeFromSuperview()
-        
-//        print("xxxxxxx")
-//        cartArray.forEach { print($0.name) }
-//        print("xxxxxxx")
     }
     
 }
-

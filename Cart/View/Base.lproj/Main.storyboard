@@ -582,7 +582,7 @@
                         <viewLayoutGuide key="safeArea" id="M6V-Ft-3eu"/>
                     </view>
                     <navigationItem key="navigationItem" title="Checkout" id="Piw-RG-Rxz">
-                        <barButtonItem key="leftBarButtonItem" systemItem="undo" id="ltH-E7-dQc">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="ltH-E7-dQc">
                             <color key="tintColor" red="0.83921568629999999" green="0.38431372549999998" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="backButtonPressed:" destination="Yjg-51-q14" id="eHd-yl-3ad"/>

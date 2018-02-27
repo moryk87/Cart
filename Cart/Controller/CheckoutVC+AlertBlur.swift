@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol CheckoutViewControllerDelegate {
+    func orderPlaced(didPlaced: Bool)
+}
+
 extension CheckoutViewController {
     
     func popUpAlert(condition: String, errorCode: Int, description: String) {
@@ -23,7 +27,13 @@ extension CheckoutViewController {
             saveAlert = UIAlertController(title: "Error code: \(errorCode)", message: description, preferredStyle: UIAlertControllerStyle.alert)
         }
 
-        saveAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in self.blurVisualEffectView.removeFromSuperview()
+        saveAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+            if condition == "placeOrder" {
+                
+                self.checkoutDelegate?.orderPlaced(didPlaced: true)
+                self.dismiss(animated: true, completion: nil)
+            }
+            self.blurVisualEffectView.removeFromSuperview()
         }))
 
         saveAlert.view.tintColor = UIColor(red:0.33, green:0.38, blue:0.50, alpha:1.0)

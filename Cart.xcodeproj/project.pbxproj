@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14036A50203E05A600BDBDDC /* CartVC+CellDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14036A4F203E05A600BDBDDC /* CartVC+CellDelegates.swift */; };
+		14036A50203E05A600BDBDDC /* CartVC+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14036A4F203E05A600BDBDDC /* CartVC+Delegates.swift */; };
 		1486BE57203C386700BA072B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486BE56203C386700BA072B /* AppDelegate.swift */; };
 		1486BE59203C386700BA072B /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486BE58203C386700BA072B /* CartViewController.swift */; };
 		1486BE5C203C386700BA072B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1486BE5A203C386700BA072B /* Main.storyboard */; };
@@ -33,7 +33,7 @@
 
 /* Begin PBXFileReference section */
 		12AA18F04C390BA4E3E8D085 /* Pods-Cart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cart.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cart/Pods-Cart.release.xcconfig"; sourceTree = "<group>"; };
-		14036A4F203E05A600BDBDDC /* CartVC+CellDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CartVC+CellDelegates.swift"; sourceTree = "<group>"; };
+		14036A4F203E05A600BDBDDC /* CartVC+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CartVC+Delegates.swift"; sourceTree = "<group>"; };
 		1486BE53203C386700BA072B /* Cart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1486BE56203C386700BA072B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1486BE58203C386700BA072B /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 			children = (
 				1486BE58203C386700BA072B /* CartViewController.swift */,
 				1486BE6F203C409A00BA072B /* CartVC+TableConfig.swift */,
-				14036A4F203E05A600BDBDDC /* CartVC+CellDelegates.swift */,
+				14036A4F203E05A600BDBDDC /* CartVC+Delegates.swift */,
 				1486BE73203C695000BA072B /* CartTableViewCell.swift */,
 				1486BE99203DAC9200BA072B /* AddTableViewCell.swift */,
 				1486BE6B203C38FC00BA072B /* CheckoutViewController.swift */,
@@ -308,7 +308,7 @@
 				1486BE96203D8EA100BA072B /* GoodsLabel.swift in Sources */,
 				1486BE6E203C3CCB00BA072B /* GetCurrencyData.swift in Sources */,
 				1486BE9E203DBF0A00BA072B /* CheckoutVC+AlertBlur.swift in Sources */,
-				14036A50203E05A600BDBDDC /* CartVC+CellDelegates.swift in Sources */,
+				14036A50203E05A600BDBDDC /* CartVC+Delegates.swift in Sources */,
 				1486BE74203C695000BA072B /* CartTableViewCell.swift in Sources */,
 				1486BE6C203C38FC00BA072B /* CheckoutViewController.swift in Sources */,
 				1486BE57203C386700BA072B /* AppDelegate.swift in Sources */,

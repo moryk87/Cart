@@ -39,7 +39,6 @@ class GetCurrencyData {
     func convertJSONDataRate(json: JSON, pair: String) {
         
         if let conversationRateResult = json["quotes"][pair].float {
-            print(conversationRateResult)
             self.currencyDelegate?.newConversationRateData(newConversationRate: conversationRateResult)
         } else {
             print("JSON error")
@@ -79,7 +78,6 @@ class GetCurrencyData {
             
             print("Underlying error: \(String(describing: error.underlyingError))")
         } else if let error = error as? URLError {
-//            print("URLError occurred: \(error)")
             self.currencyDelegate?.makePopupAlert(errorCode: error.errorCode, description: error.localizedDescription)
             
         } else {
@@ -88,6 +86,12 @@ class GetCurrencyData {
         }
     }
     
+}
+
+class Connectivity {
+    class func isConnectedToInternet() ->Bool {
+        return NetworkReachabilityManager()!.isReachable
+    }
 }
 
 

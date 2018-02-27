@@ -28,11 +28,15 @@ class CheckoutViewController: UIViewController {
     @IBOutlet weak var selectButton: UIButton!
     
     let cartVC = CartViewController()
+    let goodsBank = GoodsBank()
     let getCurrencyData = GetCurrencyData()
+//    let connectivity = Connectivity()
     let currencyBank = CurrencyBank()
     var currencyArray = [CurrencyLabel] ()
     var checkoutArray = [GoodsLabel] ()
     var blurVisualEffectView = UIVisualEffectView()
+    
+    var checkoutDelegate: CheckoutViewControllerDelegate?
     
     var conversationRate: Float = 1.0
     var currentCurrency: String = "USD"
@@ -81,7 +85,6 @@ class CheckoutViewController: UIViewController {
     }
     
     func makeRequestURL(APIKey key: String, sourceCurrency: String, targetCurrency: String) -> String {
-//        print("\(basicURL + key + "&source=" + sourceCurrency + "&currencies=" + targetCurrency)")
         return (basicURL + key + "&source=" + sourceCurrency + "&currencies=" + targetCurrency)
     }
     
@@ -100,10 +103,14 @@ class CheckoutViewController: UIViewController {
     
     
     @IBAction func orderButtonPressed(_ sender: UIButton) {
-        if checkoutArray.isEmpty == true {
-            popUpAlert(condition: "emptyCart", errorCode: 000, description: "")
+        if Connectivity.isConnectedToInternet() {
+            if checkoutArray.isEmpty == true {
+                popUpAlert(condition: "emptyCart", errorCode: 000, description: "")
+            } else {
+                popUpAlert(condition: "placeOrder", errorCode: 000, description: "")
+            }
         } else {
-            popUpAlert(condition: "placeOrder", errorCode: 000, description: "")
+            popUpAlert(condition: "httpResponse", errorCode: 503, description: "No internet connection")
         }
     }
     
@@ -116,7 +123,6 @@ class CheckoutViewController: UIViewController {
         currencyView.removeFromSuperview()
         blurVisualEffectView.removeFromSuperview()
         
-//        print(newCurrency)
         let requestedURL = makeRequestURL(APIKey: API_Key, sourceCurrency: "USD", targetCurrency: newCurrency)
         let requestedPair = "USD" + newCurrency
         getCurrencyData.downloadRate(url: requestedURL, pair: requestedPair)
